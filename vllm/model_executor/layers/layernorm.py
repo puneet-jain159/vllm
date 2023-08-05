@@ -2,7 +2,7 @@
 import torch
 import torch.nn as nn
 
-from vllm import layernorm_ops
+# from vllm import layernorm_ops
 import vllm_layernorm_ops as layernorm_ops
 
 

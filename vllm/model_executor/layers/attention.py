@@ -7,9 +7,12 @@ from xformers import ops as xops
 from xformers.ops.fmha.attn_bias import (BlockDiagonalCausalMask,
                                          LowerTriangularMaskWithTensorBias)
 
-from vllm import attention_ops
-from vllm import cache_ops
-from vllm import pos_encoding_ops
+# from vllm import attention_ops
+import vllm_attention_ops as attention_ops
+# from vllm import cache_ops
+import vllm_cache_ops as cache_ops
+# from vllm import pos_encoding_ops
+import vllm_pos_encoding_ops as pos_encoding_ops
 from vllm.model_executor.input_metadata import InputMetadata
 
 _SUPPORTED_HEAD_SIZES = [64, 80, 96, 112, 128, 256]
